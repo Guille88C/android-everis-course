@@ -3,7 +3,6 @@ package com.everis.myapplication.tutorial
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.everis.myapplication.R
-import kotlinx.android.synthetic.main.activity_tutorial.*
 
 class TutorialActivity : AppCompatActivity() {
 
@@ -11,7 +10,8 @@ class TutorialActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
 
-        vpTutorial?.adapter = TutorialAdapter(fm = supportFragmentManager)
-        tlTutorial?.setupWithViewPager(vpTutorial)
+        // TODO: Create an adapter for viewPager (FragmentPagerAdapter) and show views inside it.
+
+        // TODO: Add a tabLayout.
     }
 }

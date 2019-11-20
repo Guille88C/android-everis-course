@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.everis.myapplication.R
 import com.everis.myapplication.list.ListModel
-import kotlinx.android.synthetic.main.fragment_detail_list.*
 
 /**
  * A simple [Fragment] subclass.
@@ -26,10 +25,7 @@ class DetailListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        arguments?.getParcelable<ListModel>(DATA)?.let { item ->
-            tvDetailListTitle?.text = item.title
-            tvDetailListDescription?.text = item.description
-        }
+        // TODO: Fill layout fields with DATA attribute.
     }
 
     companion object {

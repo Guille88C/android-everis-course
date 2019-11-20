@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.everis.myapplication.R
 import com.everis.myapplication.list.ListModel
-import com.everis.myapplication.list.detail.DetailListFragment
-import kotlinx.android.synthetic.main.fragment_list.*
 
 /**
  * A simple [Fragment] subclass.
@@ -29,14 +27,9 @@ class ListFragment : Fragment() {
 
         val lData: MutableList<ListModel> = getData()
 
-        rvList?.adapter = ListAdapter(lData = lData).also {
-            it.itemPressed = { item ->
-                fragmentManager?.beginTransaction()
-                    ?.replace(R.id.flListContainer, DetailListFragment.newInstance(data = item))
-                    ?.addToBackStack(DetailListFragment.TAG)
-                    ?.commit()
-            }
-        }
+        // TODO: Create ListAdapter and assign it to rvList.
+
+        // TODO: When list row is pressed, navigate to DetailListFragment.
     }
 
     private fun getData(): MutableList<ListModel> {

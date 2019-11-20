@@ -14,4 +14,10 @@
     <string name="go_to_profile">Go to profile</string>
 
     <string name="profile_description">This is a profile text description to show this dialog.</string>
+
+    <string name="tutorial_title_1">Tutorial title 1</string>
+    <string name="tutorial_description_1">Tutorial description 1</string>
+
+    <string name="tutorial_title_2">Tutorial title 2</string>
+    <string name="tutorial_description_2">Tutorial description 2</string>
 </resources>

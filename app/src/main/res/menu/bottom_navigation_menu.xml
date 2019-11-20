@@ -15,9 +15,9 @@
         android:title="@string/main" />
 
     <item
-        android:id="@+id/action_camera"
-        android:icon="@drawable/ic_camera"
-        android:title="@string/camera" />
+        android:id="@+id/action_browser"
+        android:icon="@drawable/ic_search"
+        android:title="@string/browser" />
     <item
         android:id="@+id/action_profile"
         android:icon="@drawable/ic_profile"

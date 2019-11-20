@@ -3,7 +3,7 @@ package com.everis.myapplication.global
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.everis.myapplication.R
-import com.everis.myapplication.global.camera.GlobalCameraFragment
+import com.everis.myapplication.global.camera.GlobalBrowserFragment
 import com.everis.myapplication.global.list.GlobalListFragment
 import com.everis.myapplication.global.main.GlobalMainFragment
 import com.everis.myapplication.global.profile.GlobalProfileFragment
@@ -45,9 +45,9 @@ class GlobalActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.action_camera -> {
+                R.id.action_browser -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.flGlobalContainer, GlobalCameraFragment.newInstance())
+                        .replace(R.id.flGlobalContainer, GlobalBrowserFragment.newInstance())
                         .commit()
 
                     true

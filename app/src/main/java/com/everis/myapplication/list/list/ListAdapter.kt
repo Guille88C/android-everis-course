@@ -11,6 +11,8 @@ import com.everis.myapplication.list.ListModel
 class ListAdapter(private val lData: List<ListModel>) :
     RecyclerView.Adapter<ListAdapter.ListViewHoler>() {
 
+    var itemPressed: ((ListModel) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHoler {
         return ListViewHoler(
             LayoutInflater.from(parent.context).inflate(
@@ -28,6 +30,7 @@ class ListAdapter(private val lData: List<ListModel>) :
     }
 
     inner class ListViewHoler(view: View) : RecyclerView.ViewHolder(view) {
+
         fun bind(data: ListModel) {
             itemView.findViewById<AppCompatTextView>(R.id.tvListRowTitle)?.let {
                 it.text = data.title
@@ -35,6 +38,10 @@ class ListAdapter(private val lData: List<ListModel>) :
 
             itemView.findViewById<AppCompatTextView>(R.id.tvListRowDescription)?.let {
                 it.text = data.description
+            }
+
+            itemView.setOnClickListener {
+                itemPressed?.invoke(data)
             }
         }
     }

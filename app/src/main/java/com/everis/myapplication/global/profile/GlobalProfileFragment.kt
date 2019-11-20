@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.everis.myapplication.R
-import com.everis.myapplication.profile.ProfileDialogFragment
 import kotlinx.android.synthetic.main.fragment_global_profile.*
 
 /**
@@ -27,8 +26,7 @@ class GlobalProfileFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         bGlobalProfile?.setOnClickListener {
-            ProfileDialogFragment.newInstance()
-                .show(childFragmentManager.beginTransaction(), ProfileDialogFragment.TAG)
+            // TODO: Show ProfileDialogFragment.
         }
     }
 

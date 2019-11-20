@@ -3,11 +3,7 @@ package com.everis.myapplication.global
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.everis.myapplication.R
-import com.everis.myapplication.global.camera.GlobalBrowserFragment
-import com.everis.myapplication.global.list.GlobalListFragment
 import com.everis.myapplication.global.main.GlobalMainFragment
-import com.everis.myapplication.global.profile.GlobalProfileFragment
-import com.everis.myapplication.global.tutorial.GlobalTutorialFragment
 import kotlinx.android.synthetic.main.activity_global.*
 
 class GlobalActivity : AppCompatActivity() {
@@ -25,16 +21,13 @@ class GlobalActivity : AppCompatActivity() {
         bnvGlobal?.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.action_list -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.flGlobalContainer, GlobalListFragment.newInstance())
-                        .commit()
+                    // TODO: Show GlobalListFragment.
+
                     true
                 }
 
                 R.id.action_tutorial -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.flGlobalContainer, GlobalTutorialFragment.newInstance())
-                        .commit()
+                    // TODO: Show GlobalTutorialFragment.
 
                     true
                 }
@@ -46,16 +39,12 @@ class GlobalActivity : AppCompatActivity() {
                 }
 
                 R.id.action_browser -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.flGlobalContainer, GlobalBrowserFragment.newInstance())
-                        .commit()
+                    // TODO: Show GlobalBrowserFragment.
 
                     true
                 }
                 R.id.action_profile -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.flGlobalContainer, GlobalProfileFragment.newInstance())
-                        .commit()
+                    // TODO: Show GlobalProfileFragment.
 
                     true
                 }

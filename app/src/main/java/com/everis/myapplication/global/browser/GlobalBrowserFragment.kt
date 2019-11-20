@@ -1,8 +1,6 @@
-package com.everis.myapplication.global.camera
+package com.everis.myapplication.global.browser
 
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,9 +27,7 @@ class GlobalBrowserFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         bGlobalBrowser?.setOnClickListener {
-            val browserIntent =
-                Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"))
-            startActivity(browserIntent)
+            // TODO: Navigate to a external browser.
         }
     }
 

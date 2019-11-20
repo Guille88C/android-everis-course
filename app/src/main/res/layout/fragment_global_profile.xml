@@ -7,6 +7,7 @@
     tools:context=".global.profile.GlobalProfileFragment">
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bGlobalProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/go_to_profile"

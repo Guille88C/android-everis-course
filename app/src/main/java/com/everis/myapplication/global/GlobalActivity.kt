@@ -1,8 +1,7 @@
 package com.everis.myapplication.global
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.everis.myapplication.R
 import com.everis.myapplication.global.camera.GlobalCameraFragment
 import com.everis.myapplication.global.list.GlobalListFragment
@@ -18,8 +17,10 @@ class GlobalActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_global)
 
-        bnvGlobal?.selectedItemId = R.id.action_main
-        showMainView()
+        if (savedInstanceState == null) {
+            bnvGlobal?.selectedItemId = R.id.action_main
+            showMainView()
+        }
 
         bnvGlobal?.setOnNavigationItemSelectedListener {
             when (it.itemId) {

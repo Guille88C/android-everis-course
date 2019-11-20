@@ -9,6 +9,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.everis.myapplication.R
 
+
 /**
  * A simple [Fragment] subclass.
  */
@@ -22,5 +23,9 @@ class ProfileDialogFragment : DialogFragment() {
         return inflater.inflate(R.layout.fragment_profile_dialog, container, false)
     }
 
+    companion object {
+        const val TAG = "ProfileDialogFragment"
 
+        fun newInstance(): ProfileDialogFragment = ProfileDialogFragment()
+    }
 }

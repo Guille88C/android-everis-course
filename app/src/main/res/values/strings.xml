@@ -12,4 +12,6 @@
     <string name="go_to_tutorial">Go to tutorial</string>
     <string name="go_to_browser">Go to browser</string>
     <string name="go_to_profile">Go to profile</string>
+
+    <string name="profile_description">This is a profile text description to show this dialog.</string>
 </resources>

@@ -27,6 +27,19 @@ class ListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        val lData: MutableList<ListModel> = getData()
+
+        rvList?.adapter = ListAdapter(lData = lData).also {
+            it.itemPressed = { item ->
+                fragmentManager?.beginTransaction()
+                    ?.replace(R.id.flListContainer, DetailListFragment.newInstance(data = item))
+                    ?.addToBackStack(DetailListFragment.TAG)
+                    ?.commit()
+            }
+        }
+    }
+
+    private fun getData(): MutableList<ListModel> {
         val lData: MutableList<ListModel> = ArrayList()
         lData.add(ListModel(title = "Item title 1", description = "Item description 1"))
         lData.add(ListModel(title = "Item title 2", description = "Item description 2"))
@@ -38,15 +51,7 @@ class ListFragment : Fragment() {
         lData.add(ListModel(title = "Item title 8", description = "Item description 8"))
         lData.add(ListModel(title = "Item title 9", description = "Item description 9"))
         lData.add(ListModel(title = "Item title 10", description = "Item description 10"))
-
-        rvList?.adapter = ListAdapter(lData = lData).also {
-            it.itemPressed = { item ->
-                fragmentManager?.beginTransaction()
-                    ?.replace(R.id.flListContainer, DetailListFragment.newInstance(data = item))
-                    ?.addToBackStack(DetailListFragment.TAG)
-                    ?.commit()
-            }
-        }
+        return lData
     }
 
     companion object {

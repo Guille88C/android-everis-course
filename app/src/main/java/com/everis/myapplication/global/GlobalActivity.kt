@@ -3,7 +3,7 @@ package com.everis.myapplication.global
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.everis.myapplication.R
-import com.everis.myapplication.global.camera.GlobalBrowserFragment
+import com.everis.myapplication.global.browser.GlobalBrowserFragment
 import com.everis.myapplication.global.list.GlobalListFragment
 import com.everis.myapplication.global.main.GlobalMainFragment
 import com.everis.myapplication.global.profile.GlobalProfileFragment

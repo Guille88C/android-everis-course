@@ -1,4 +1,4 @@
-package com.everis.myapplication.global.camera
+package com.everis.myapplication.global.browser
 
 
 import android.content.Intent
